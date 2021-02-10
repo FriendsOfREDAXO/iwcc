@@ -97,7 +97,7 @@ class consent_manager_cache
         foreach ($this->cookiegroups[$clangId] as $uid => $cookiegroup) {
             $cookie_uids = array_filter(explode('|', $cookiegroup['cookie']));
             if ($cookiegroup['required'] == '|1|') {
-                $cookie_uids[] = 'consent_manager';
+                $cookie_uids[] = 'consent-manager';
             }
             $this->cookiegroups[$clangId][$uid]['cookie_uids'] = array_merge(array_filter(array_unique($cookie_uids)));
             $domainIds = array_filter(explode('|', $cookiegroup['domain']));
